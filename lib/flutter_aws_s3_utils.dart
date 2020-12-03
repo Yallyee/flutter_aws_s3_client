@@ -2,6 +2,7 @@ import 'flutter_aws_s3_client.dart';
 import 'flutter_aws_config.dart';
 
 _loadImage(String name) async {
+  //TODO: How we can move this "s3" out and make it non-indipendent functions ?? 
   var res = await s3.getObject(name);
   return res.bodyBytes;
 }
